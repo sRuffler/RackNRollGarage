@@ -137,6 +137,14 @@
     background-size: cover;
   }
 
+  #heroSection .overlay2 {
+    background: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 50%
+    );
+  }
+
   #heroSection .hero-content {
     padding-left: 16px;
     padding-right: 16px;

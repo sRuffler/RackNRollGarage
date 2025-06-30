@@ -1,9 +1,6 @@
 #testimonalsSection {
   padding: 80px 24px;
-  background: url(metal.png);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+
   z-index: 1;
   overflow: hidden;
   position: relative;
