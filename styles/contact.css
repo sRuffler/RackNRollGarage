@@ -1,0 +1,123 @@
+#contactSection {
+  padding: 24px 40px;
+  background: linear-gradient(to right, #0080ff, #005bbb);
+  background-color: #005bbb;
+}
+
+#contactSection .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#contactSection h2 {
+  font-size: 3em;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+}
+#contactSection p {
+  font-weight: 500;
+  color: white;
+  max-width: 600px;
+}
+
+#contactSection .contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+  font-family: "Poppins", sans-serif;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#contactSection .contact-form input {
+  width: 100%;
+  padding: 0.75rem;
+  grid-column: 1;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  outline: none;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+}
+
+#contactSection .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  outline: none;
+  grid-column: 2;
+  height: 100%;
+  grid-row: 1 / span 3;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+  min-height: 130px;
+}
+
+#contactSection .contact-form input::placeholder,
+#contactSection .contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#contactSection .contact-form input:focus,
+#contactSection .contact-form textarea:focus {
+  border: 1px solid white;
+}
+
+#contactSection .contact-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #ffffff;
+  color: #005bbb;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  justify-self: start;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+#contactSection .contact-form button:hover {
+  opacity: 0.9;
+}
+
+#contactSection .contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+
+  p {
+    color: white;
+    font-weight: 400;
+
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #contactSection {
+    padding: 24px 16px;
+  }
+
+  #contactSection .contact-form {
+    grid-template-columns: 1fr;
+  }
+  #contactSection .contact-form input,
+  #contactSection .contact-form textarea,
+  #contactSection .contact-form button {
+    grid-column: 1 !important;
+  }
+
+  #contactSection .contact-form textarea {
+    grid-row: 4;
+  }
+}
