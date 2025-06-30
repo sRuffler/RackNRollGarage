@@ -1,0 +1,46 @@
+#gallerySection {
+  padding: 80px 0px;
+  overflow: hidden;
+}
+
+#gallerySection .container {
+  width: 100vw;
+  overflow: hidden;
+}
+#gallerySection .row {
+  display: flex;
+  overflow: hidden;
+  margin: 20px 0;
+  height: 200px;
+  cursor: grab;
+}
+#gallerySection .track {
+  display: flex;
+  will-change: transform;
+}
+#gallerySection .card {
+  height: 100%;
+  margin-right: 20px;
+  border-radius: 8px;
+  min-width: 300px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--slide-dist)));
+  }
+}
+@keyframes slide-right {
+  from {
+    transform: translateX(calc(-1 * var(--slide-dist)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}

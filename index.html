@@ -19,11 +19,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/services.css" />
+    <link rel="stylesheet" href="styles/gallery.css" />
+    <link rel="stylesheet" href="styles/testemonials.css" />
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   </head>
-  <body>
+  <body id="app">
     <nav class="desktop-nav">
       <img src="images/logo_white.png" />
       <ul>
@@ -40,7 +53,6 @@
         <div class="hero-header">
           <h1>Custom <span>Campers</span></h1>
           <h3>Camper conversions specialist</h3>
-          <button>Contact us</button>
         </div>
         <div class="hero-body">
           <p style="padding-bottom: 32px; border-bottom: 1px solid #f8c30d">
@@ -69,7 +81,84 @@
         </div>
       </div>
     </section>
+    <section id="servicesSection">
+      <div class="service-card">
+        <div class="img-wireframe"></div>
+        <a
+          >Bespoke Camper<br /><span>Conversions</span
+          ><i class="fa-solid fa-chevron-right"></i
+        ></a>
+      </div>
+      <div class="service-card">
+        <div class="service-card">
+          <div class="img-wireframe"></div>
+          <a
+            >VW Camper<br /><span>Conversions</span
+            ><i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-card">
+          <div class="img-wireframe"></div>
+          <a
+            >Skyline<br /><span>Pop-up roof</span
+            ><i class="fa-solid fa-chevron-right"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+    <section id="gallerySection">
+      <sliding-rows-carousel
+        :rows="rows"
+        :cols="cols"
+        :speed="speed"
+        :card-imgs="cardImgs"
+      ></sliding-rows-carousel>
+    </section>
+    <section id="testimonalsSection">
+      <div class="testimonals-grid">
+        <div class="testimonal-container">
+          <i class="fa-regular fa-circle-user"></i>
+          <label class="client-name">Tom M</label>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="quote">
+            "We had some electrics sorted on our caddy and we are really pleased
+            with the work done! Alex took time to really explain things to us.
+            Genuinely nice approachable group working of people there. Will
+            certainly be back if we ever need anything!"
+          </p>
+        </div>
+        <div class="testimonal-container">
+          <i class="fa-regular fa-circle-user"></i>
+          <label class="client-name">Mike Bridges</label>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="quote">
+            "Alex and his team have recently carried out a conversion for us.
+            From the beginning, Alex was very helpful and patient with all the
+            questions that we had. (We had a few!!) We wanted something that was
+            a little bit different from a standard conversion, The end result
+            was exactly what we wanted. The overall finish and standard of work
+            is of the highest quality. We would not hesitate to use Rack'n'Roll
+            for any future work that we require"
+          </p>
+          <img src="testimonal.png" alt="Customers campervan img" />
+        </div>
+
+        <div class="testimonal-container">
+          <i class="fa-regular fa-circle-user"></i>
+          <label class="client-name">Tammy Boyce</label>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="quote">
+            "Alex and his team created the van of our dreams! He listened to
+            what we wanted and helped us figure how to make it even better.
+            Would absolutely highly recommend. :)"
+          </p>
+        </div>
+      </div>
+    </section>
     <!-- JavaScript -->
+    <script src="slidingRowsCarousel.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

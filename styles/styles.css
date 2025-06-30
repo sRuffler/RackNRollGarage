@@ -1,0 +1,27 @@
+:root {
+  --font-family: "Poppins", sans-serif;
+  --primary-color: 50b1e3;
+  --secondary-color: #d87600;
+  --text-highlight: #f8c30d;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.text-highlight {
+  color: var(--text-highlight);
+}
