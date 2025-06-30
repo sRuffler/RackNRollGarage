@@ -25,3 +25,87 @@ body {
 .text-highlight {
   color: var(--text-highlight);
 }
+
+#aboutSection {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 1) 270px
+  );
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+  padding: 40px;
+  position: relative;
+  margin-top: -270px;
+
+  p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 1em;
+    color: white;
+    max-width: 870px;
+    word-wrap: break-word;
+    span {
+      font-weight: 600;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutSection {
+    margin-top: -100px;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 1) 40px
+    );
+  }
+}
+
+@media (max-width: 800px) {
+  #aboutSection {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  #aboutSection {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 800px) {
+  #aboutSection {
+    font-size: 16px;
+  }
+
+  #aboutSection p {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #aboutSection {
+    font-size: 20px;
+  }
+
+  #aboutSection p {
+    max-width: 750px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #aboutSection {
+    font-size: 20px;
+  }
+
+  #aboutSection p {
+    max-width: 870px;
+  }
+}
