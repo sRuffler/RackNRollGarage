@@ -41,16 +41,18 @@ const InfiniteScrollGrid = {
       // Center the middle card in each track
       this.$nextTick(() => {
         const tracks = this.$refs.tracks || [];
-        tracks.forEach((track) => {
+        tracks.forEach((track, index) => {
           const cards = track.querySelectorAll(".card");
           if (!cards.length) return;
           const trackWidth = track.offsetWidth;
+
           const cardWidth = cards[0].offsetWidth;
           const gap = this.gap;
           const middleIndex = Math.floor(cards.length / 2);
           const scrollTo =
             (cardWidth + gap) * middleIndex + cardWidth / 2 - trackWidth / 2;
           track.scrollLeft = scrollTo;
+          if (index == 1) track.scrollLeft += 160;
         });
       });
     },
