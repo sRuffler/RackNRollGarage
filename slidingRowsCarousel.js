@@ -15,6 +15,9 @@ const SlidingRowsCarousel = {
         startX: 0,
         startTime: 0,
       },
+      resizeTimeout: null,
+      lastWidth: window.innerWidth,
+      lastHeight: window.innerHeight,
     };
   },
   mounted() {
@@ -24,6 +27,7 @@ const SlidingRowsCarousel = {
   beforeDestroy() {
     window.removeEventListener("resize", this.onResize);
     this.animations.forEach((anim) => anim.cancel());
+    if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
   },
   methods: {
     rowImages(rowIndex) {
@@ -52,19 +56,24 @@ const SlidingRowsCarousel = {
 
         // Define start/end frames based on row parity
         let frames;
-        if (i % 2 === 0) {
-          // slide-left: 0 -> -dist
-          frames = [
-            { transform: "translateX(0)" },
-            { transform: `translateX(${-dist}px)` },
-          ];
-        } else {
-          // slide-right: -dist -> 0
-          frames = [
-            { transform: `translateX(${-dist}px)` },
-            { transform: "translateX(0)" },
-          ];
-        }
+        // if (i % 2 === 0) {
+        //   // slide-left: 0 -> -dist
+        //   frames = [
+        //     { transform: "translateX(0)" },
+        //     { transform: `translateX(${-dist}px)` },
+        //   ];
+        // } else {
+        //   // slide-right: -dist -> 0
+        //   frames = [
+        //     { transform: `translateX(${-dist}px)` },
+        //     { transform: "translateX(0)" },
+        //   ];
+        // }
+
+        frames = [
+          { transform: "translateX(0)" },
+          { transform: `translateX(${-dist}px)` },
+        ];
 
         // Create Web Animation
         const anim = track.animate(frames, {
@@ -101,9 +110,10 @@ const SlidingRowsCarousel = {
       const cw = first.getBoundingClientRect().width;
       const dist = (cw + 20) * this.cols;
       const duration = this.speed * 1000;
-      const direction = row % 2 === 0 ? -1 : 1;
+      // const direction = row % 2 === 0 ? -1 : 1;
+      const direction = -1;
       const timeShift = (delta / dist) * duration * direction;
-      anim.currentTime = startTime + timeShift;
+      anim.currentTime = Math.max(0, startTime + timeShift);
     },
     onPointerUp(e) {
       if (!this.dragging) return;
@@ -128,7 +138,18 @@ const SlidingRowsCarousel = {
       }
     },
     onResize() {
-      this.setupAnimations();
+      // Only run if size actually changed
+      const w = window.innerWidth;
+      const h = window.innerHeight;
+      if (w === this.lastWidth && h === this.lastHeight) return;
+      this.lastWidth = w;
+      this.lastHeight = h;
+
+      // Debounce setupAnimations
+      if (this.resizeTimeout) clearTimeout(this.resizeTimeout);
+      this.resizeTimeout = setTimeout(() => {
+        this.setupAnimations();
+      }, 200);
     },
   },
   template: `
