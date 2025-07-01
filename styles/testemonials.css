@@ -1,6 +1,5 @@
 #testimonalsSection {
   padding: 40px 24px 80px 24px;
-
   z-index: 1;
   overflow: hidden;
   position: relative;
@@ -29,10 +28,10 @@
     color: var(--off-white-smoke);
     text-align: center;
     font-weight: 600;
+    margin-top: 8px;
     margin-bottom: 38px;
     font-size: 1.5rem;
     z-index: 3;
-
     position: relative;
   }
 
