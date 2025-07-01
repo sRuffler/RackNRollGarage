@@ -17,7 +17,7 @@ const app = Vue.createApp({
 });
 
 // Register the component defined in SlidingRowsCarousel.js
-app.component("sliding-rows-carousel", window.SlidingRowsCarousel);
+app.component("infinite-scroll-grid", window.InfiniteScrollGrid);
 app.mount("#app");
 
 const observer = new IntersectionObserver(

@@ -80,41 +80,43 @@
       </p>
     </section>
     <section id="servicesSection">
-      <div class="service-card">
-        <div class="img-wireframe"></div>
-        <a
-          >Bespoke Camper<br /><span>Conversions</span
-          ><i class="fa-solid fa-chevron-right"></i
-        ></a>
-      </div>
-      <div class="service-card">
+      <h2>Our Services</h2>
+      <div class="container">
         <div class="service-card">
           <div class="img-wireframe"></div>
           <a
-            >VW Camper<br /><span>Conversions</span
+            >Bespoke Camper<br /><span>Conversions</span
             ><i class="fa-solid fa-chevron-right"></i
           ></a>
         </div>
-      </div>
-      <div class="service-card">
         <div class="service-card">
-          <div class="img-wireframe"></div>
-          <a
-            >Skyline<br /><span>Pop-up roof</span
-            ><i class="fa-solid fa-chevron-right"></i
-          ></a>
+          <div class="service-card">
+            <div class="img-wireframe"></div>
+            <a
+              >VW Camper<br /><span>Conversions</span
+              ><i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-card">
+            <div class="img-wireframe"></div>
+            <a
+              >Skyline<br /><span>Pop-up roof</span
+              ><i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
         </div>
       </div>
     </section>
     <section id="gallerySection">
       <h2>Gallery</h2>
       <h3>Take a look at some of our work</h3>
-      <sliding-rows-carousel
+      <infinite-scroll-grid
         :rows="rows"
         :cols="cols"
-        :speed="speed"
         :card-imgs="cardImgs"
-      ></sliding-rows-carousel>
+      ></infinite-scroll-grid>
     </section>
     <section id="testimonalsSection">
       <h2>Testimonials</h2>
