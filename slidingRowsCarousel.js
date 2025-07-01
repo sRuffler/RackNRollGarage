@@ -10,16 +10,17 @@ const InfiniteScrollGrid = {
     return {
       dragging: false,
       drag: { row: null, startX: 0, startScroll: 0 },
+      lastWidth: window.innerWidth,
     };
   },
   mounted() {
     this.$nextTick(() => {
       this.centerTracks();
-      window.addEventListener("resize", this.centerTracks);
+      window.addEventListener("resize", this.onResize);
     });
   },
   beforeDestroy() {
-    window.removeEventListener("resize", this.centerTracks);
+    window.removeEventListener("resize", this.onResize);
   },
   methods: {
     rowImages(rowIndex, repeat = 5) {
@@ -99,6 +100,13 @@ const InfiniteScrollGrid = {
       window.removeEventListener("pointermove", this.onPointerMove);
       window.removeEventListener("pointerup", this.onPointerUp);
       window.removeEventListener("pointercancel", this.onPointerUp);
+    },
+    onResize() {
+      // Only recenter if width changed (not just height)
+      if (window.innerWidth !== this.lastWidth) {
+        this.lastWidth = window.innerWidth;
+        this.centerTracks();
+      }
     },
   },
   template: `
