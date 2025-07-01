@@ -13,8 +13,14 @@
     font-size: 3em;
     text-transform: uppercase;
     position: relative;
-    margin-bottom: 38px;
     line-height: 1em;
+  }
+
+  h3 {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 38px;
+    font-size: 1.5rem;
   }
 }
 
