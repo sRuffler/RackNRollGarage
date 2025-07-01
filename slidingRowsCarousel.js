@@ -100,6 +100,16 @@ const InfiniteScrollGrid = {
       window.removeEventListener("pointermove", this.onPointerMove);
       window.removeEventListener("pointerup", this.onPointerUp);
       window.removeEventListener("pointercancel", this.onPointerUp);
+
+      // Snap scroll position to nearest 80px interval
+      if (this.drag && this.drag.row !== null) {
+        const track = this.$refs.tracks[this.drag.row];
+        if (track) {
+          const snap = 160;
+          const snapped = Math.round(track.scrollLeft / snap) * snap;
+          track.scrollTo({ left: snapped, behavior: "smooth" });
+        }
+      }
     },
     onResize() {
       // Only recenter if width changed (not just height)

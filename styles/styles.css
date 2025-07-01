@@ -26,8 +26,13 @@ body {
   color: var(--text-highlight);
 }
 
+section {
+  min-height: 100vh;
+}
+
 #aboutSection {
   width: 100%;
+  min-height: unset;
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0px,

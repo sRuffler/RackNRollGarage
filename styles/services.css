@@ -5,6 +5,7 @@
   background-color: white;
   padding: 100px 40px 80px 40px;
   align-items: center;
+  justify-content: center;
 
   h2 {
     color: var(--secondary-color);

@@ -2,6 +2,7 @@
   padding: 24px 40px;
   background: linear-gradient(to right, #0080ff, #005bbb);
   background-color: #005bbb;
+  min-height: unset;
 }
 
 #contactSection .container {
