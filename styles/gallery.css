@@ -35,6 +35,34 @@
 .infinite-grid .row {
   width: 100%;
   overflow: hidden;
+  position: relative;
+}
+
+.track-blur {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px; /* adjust as needed */
+  pointer-events: none;
+  z-index: 2;
+}
+
+.track-blur.left {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.track-blur.right {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .infinite-grid .track {
@@ -54,4 +82,10 @@
   background-position: center;
   border-radius: 12px;
   flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .track-blur {
+    width: 40px;
+  }
 }

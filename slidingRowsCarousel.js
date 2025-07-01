@@ -116,6 +116,8 @@ const InfiniteScrollGrid = {
         :key="rowIndex"
         class="row"
       >
+      <div class="track-blur left"></div>
+      <div class="track-blur right"></div>
         <div
           class="track"
           ref="tracks"
