@@ -53,7 +53,7 @@ const InfiniteScrollGrid = {
           const scrollTo =
             (cardWidth + gap) * middleIndex + cardWidth / 2 - trackWidth / 2;
           track.scrollLeft = scrollTo;
-          if (index == 1) track.scrollLeft += 160;
+          if (index == 0 || index == 2) track.scrollLeft += 160;
         });
       });
     },
@@ -100,16 +100,6 @@ const InfiniteScrollGrid = {
       window.removeEventListener("pointermove", this.onPointerMove);
       window.removeEventListener("pointerup", this.onPointerUp);
       window.removeEventListener("pointercancel", this.onPointerUp);
-
-      // Snap scroll position to nearest 80px interval
-      if (this.drag && this.drag.row !== null) {
-        const track = this.$refs.tracks[this.drag.row];
-        if (track) {
-          const snap = 160;
-          const snapped = Math.round(track.scrollLeft / snap) * snap;
-          track.scrollTo({ left: snapped, behavior: "smooth" });
-        }
-      }
     },
     onResize() {
       // Only recenter if width changed (not just height)
