@@ -1,10 +1,11 @@
 const app = Vue.createApp({
   data() {
     return {
-      rows: 2,
-      cols: 5,
+      rows: 3,
+      cols: 6,
       speed: 70,
       cardImgs: [
+        "images/hero1.jpg",
         "images/hero1.jpg",
         "images/hero1.jpg",
         "images/hero1.jpg",

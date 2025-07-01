@@ -32,6 +32,10 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+#contactSection .contact-form * {
+  font-family: "Poppins", sans-serif;
+}
+
 #contactSection .contact-form input {
   width: 100%;
   padding: 0.75rem;
@@ -105,7 +109,7 @@
 
 @media (max-width: 800px) {
   #contactSection {
-    padding: 24px 16px;
+    padding: 24px;
   }
 
   #contactSection .contact-form {

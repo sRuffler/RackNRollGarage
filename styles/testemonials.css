@@ -1,5 +1,5 @@
 #testimonalsSection {
-  padding: 40px 24px 100px 24px;
+  padding: 40px 24px 140px 24px;
 
   z-index: 1;
   overflow: hidden;
@@ -15,20 +15,20 @@
   }
 
   h2 {
-    color: var(--highway-yellow);
+    color: var(--secondary-color);
     text-align: center;
-    font-weight: 500;
-    font-size: 2.8rem;
+    font-weight: 800;
+    font-size: 3em;
     z-index: 3;
-
+    text-transform: uppercase;
     position: relative;
   }
 
   h3 {
     color: var(--off-white-smoke);
     text-align: center;
-    font-weight: 500;
-    margin-bottom: 60px;
+    font-weight: 600;
+    margin-bottom: 58px;
     font-size: 1.5rem;
     z-index: 3;
 
@@ -36,7 +36,7 @@
   }
 
   .testimonals-grid {
-    max-width: 1400px;
+    max-width: 1000px;
     position: relative;
     display: grid;
 
@@ -62,12 +62,16 @@
         font-size: 32px;
       }
       .client-name {
-        color: var(--midnight-black);
-        opacity: 0.8;
+        color: var(--primary-color);
+        opacity: 1;
+        font-weight: 700;
+        font-size: 1.5em;
       }
       .quote {
-        color: var(--midnight-black);
+        color: black;
+        font-size: 1.1em;
         text-align: center;
+        opacity: 0.8;
       }
 
       .stars {

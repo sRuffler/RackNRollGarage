@@ -1,9 +1,24 @@
 #gallerySection {
-  padding: 40px 0px;
+  padding: 80px 0px;
   overflow: hidden;
   position: relative;
   z-index: 0;
   background-color: transparent;
+}
+
+#gallerySection h2 {
+  font-size: 3em;
+  color: var(--secondary-color);
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#gallerySection h3 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 38px;
+  font-size: 1.5rem;
 }
 
 #gallerySection .container {
