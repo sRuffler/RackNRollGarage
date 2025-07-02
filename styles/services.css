@@ -41,7 +41,9 @@
   flex-direction: column;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform, box-shadow;
 }
 
 #servicesSection .service-card img {
@@ -52,7 +54,7 @@
   background: grey;
   border-radius: 16px;
   box-shadow: none;
-  transition: scale 0.5s ease, box-shadow 0.5s ease;
+  transition: box-shadow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 #servicesSection .service-card a {
@@ -63,14 +65,15 @@
   font-size: 2em;
   line-height: 1em;
   padding: 0px 8px;
-  span {
-    font-weight: 800;
-  }
+  transition: transform 0.5s cubic-bezier(0.22, 0.61, 0.36, 1), color 0.3s;
+  will-change: transform, color;
 }
 
 #servicesSection .service-card a:hover {
   text-decoration: underline;
   cursor: pointer;
+  /* Optional: scale link on hover */
+  /* transform: scale(1.05); */
 }
 
 #servicesSection .service-card a span {
@@ -92,11 +95,10 @@
 
 @media (min-width: 800px) {
   #servicesSection .service-card:hover {
-    scale: 1.05;
-
-    img {
-      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2),
-        0px 0px 20px rgba(50, 170, 255, 0.3);
-    }
+    transform: scale(1.05);
+  }
+  #servicesSection .service-card:hover img {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2),
+      0px 0px 20px rgba(50, 170, 255, 0.3);
   }
 }
