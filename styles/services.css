@@ -44,15 +44,6 @@
   transition: all 0.5s ease;
 }
 
-#servicesSection .service-card:hover {
-  scale: 1.1;
-
-  img {
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2),
-      0px 0px 30px rgba(50, 170, 255, 0.3);
-  }
-}
-
 #servicesSection .service-card img {
   height: 250px;
   width: auto;
@@ -96,5 +87,16 @@
   #servicesSection {
     padding-left: 24px;
     padding-right: 24px;
+  }
+}
+
+@media (min-width: 800px) {
+  #servicesSection .service-card:hover {
+    scale: 1.1;
+
+    img {
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2),
+        0px 0px 30px rgba(50, 170, 255, 0.3);
+    }
   }
 }
