@@ -34,6 +34,7 @@
     <link rel="stylesheet" href="styles/gallery.css" />
     <link rel="stylesheet" href="styles/testemonials.css" />
     <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/bespokeConversions.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   </head>
   <body id="app">
@@ -91,7 +92,7 @@
       <div class="container">
         <div class="service-card">
           <div class="img-wireframe"></div>
-          <a
+          <a v-on:click="toggleSidePageById('bespokeConversions')"
             >Bespoke Camper<br /><span>Conversions</span
             ><i class="fa-solid fa-chevron-right"></i
           ></a>
@@ -99,7 +100,7 @@
         <div class="service-card">
           <div class="service-card">
             <div class="img-wireframe"></div>
-            <a
+            <a v-on:click="toggleSidePageById('vwConversions')"
               >VW Camper<br /><span>Conversions</span
               ><i class="fa-solid fa-chevron-right"></i
             ></a>
@@ -108,7 +109,7 @@
         <div class="service-card">
           <div class="service-card">
             <div class="img-wireframe"></div>
-            <a
+            <a v-on:click="toggleSidePageById('skylineConversions')"
               >Skyline<br /><span>Pop-up roof</span
               ><i class="fa-solid fa-chevron-right"></i
             ></a>
@@ -207,6 +208,36 @@
         </div>
       </div>
     </section>
+
+    <div id="bespokeConversions" class="sidebar bespoke-conversions-wrapper">
+      <div class="bespoke-conversions-container">
+        <i
+          class="fa-solid fa-xmark"
+          v-on:click="toggleSidePageById('bespokeConversions')"
+        ></i>
+        <h2>Bespoke Camper Conversions</h2>
+      </div>
+    </div>
+
+    <div id="vwConversions" class="sidebar vw-conversions-wrapper">
+      <div class="vw-conversions-container">
+        <i
+          class="fa-solid fa-xmark"
+          v-on:click="toggleSidePageById('vwConversions')"
+        ></i>
+        <h2>VW Camper Conversions</h2>
+      </div>
+    </div>
+
+    <div id="skylineConversions" class="sidebar skyline-conversions-wrapper">
+      <div class="skyline-conversions-container">
+        <i
+          class="fa-solid fa-xmark"
+          v-on:click="toggleSidePageById('skylineConversions')"
+        ></i>
+        <h2>Skyline Pop-up Roof</h2>
+      </div>
+    </div>
     <!-- JavaScript -->
     <script src="slidingRowsCarousel.js"></script>
     <script src="main.js"></script>

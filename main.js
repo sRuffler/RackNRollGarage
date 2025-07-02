@@ -14,6 +14,21 @@ const app = Vue.createApp({
       ],
     };
   },
+  methods: {
+    toggleSidePageById(id) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.classList.toggle("active");
+        if (element.classList.contains("active")) {
+          window.setTimeout(() => {
+            document.body.style.overflow = "hidden";
+          }, 500);
+        } else {
+          document.body.style.overflow = "auto";
+        }
+      }
+    },
+  },
 });
 
 // Register the component defined in SlidingRowsCarousel.js

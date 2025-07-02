@@ -1,0 +1,59 @@
+.bespoke-conversions-wrapper {
+  background-color: var(--primary-color);
+}
+
+.bespoke-conversions-wrapper .bespoke-conversions-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.bespoke-conversions-wrapper i {
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.vw-conversions-wrapper {
+  background-color: var(--primary-color);
+}
+
+.vw-conversions-wrapper .vw-conversions-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.vw-conversions-wrapper i {
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
+
+.skyline-conversions-wrapper {
+  background-color: var(--primary-color);
+}
+
+.skyline-conversions-wrapper .skyline-conversions-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.skyline-conversions-wrapper i {
+  font-size: 24px;
+  padding: 8px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+}
