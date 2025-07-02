@@ -75,3 +75,10 @@
   color: var(--secondary-color);
   padding-left: 12px;
 }
+
+@media (max-width: 800px) {
+  #servicesSection {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
