@@ -94,19 +94,20 @@
 }
 
 #contactSection .contact-details {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  align-items: center;
   gap: 8px;
   margin-top: 16px;
 
-  p {
-    color: white !important;
+  i {
+    color: white;
+  }
+
+  a {
+    color: white;
     text-decoration: none;
     font-weight: 400;
-
-    span {
-      font-weight: 600;
-    }
   }
 }
 
