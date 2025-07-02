@@ -30,7 +30,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 40px;
+  gap: 80px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1200px;
@@ -42,8 +42,11 @@
   gap: 8px;
 }
 
-#servicesSection .service-card .img-wireframe {
-  min-height: 250px;
+#servicesSection .service-card img {
+  height: 250px;
+  width: auto;
+  object-fit: cover;
+  object-position: center;
   background: grey;
   border-radius: 16px;
 }
