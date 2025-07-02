@@ -47,6 +47,7 @@
   background: transparent;
   color: white;
   font-size: 0.9rem;
+  transition: border 0.5s ease;
 }
 
 #contactSection .contact-form textarea {
@@ -62,6 +63,7 @@
   color: white;
   font-size: 0.9rem;
   min-height: 130px;
+  transition: border 0.5s ease;
 }
 
 #contactSection .contact-form input::placeholder,
@@ -86,7 +88,9 @@
   justify-self: start;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  opacity: 1;
   font-family: "Poppins", sans-serif;
+  transition: opacity 0.5s ease;
 }
 
 #contactSection .contact-form button:hover {
