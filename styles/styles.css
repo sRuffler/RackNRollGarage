@@ -39,6 +39,7 @@ section {
   z-index: 100;
   padding: 40px;
   transition: right 1s ease;
+  overflow: auto;
   box-shadow: 0 0 12px 1px var(--primary-color);
 }
 
