@@ -94,6 +94,16 @@ section {
   }
 }
 
+@media (max-width: 600px) {
+  .sidebar {
+    padding: 40px 16px;
+  }
+
+  .sidebar i.fa-xmark {
+    right: 0px;
+  }
+}
+
 @media (max-width: 800px) {
   #aboutSection {
     margin-top: -100px;
