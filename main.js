@@ -61,6 +61,19 @@ const observer = new IntersectionObserver(
   }
 );
 
+const fadeObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("loaded");
+      }
+    });
+  },
+  {
+    threshold: 0.5, // 30% of the element is visible
+  }
+);
+
 const target = document.getElementById("testimonalsSection");
 if (target) {
   observer.observe(target);
@@ -69,5 +82,5 @@ if (target) {
 const fadeInElements = document.querySelectorAll(".fade-in");
 
 if (fadeInElements) {
-  fadeInElements.forEach((x) => observer.observe(x));
+  fadeInElements.forEach((x) => fadeObserver.observe(x));
 }
