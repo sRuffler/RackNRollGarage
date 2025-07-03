@@ -61,9 +61,6 @@
         transform 1.6s cubic-bezier(0.22, 0.61, 0.36, 1);
       will-change: opacity, transform;
 
-      i {
-        font-size: 32px;
-      }
       .client-name {
         color: var(--primary-color);
         opacity: 1;
@@ -106,7 +103,7 @@
 }
 
 .stars i {
-  font-size: 1rem !important;
+  font-size: 1rem;
 }
 
 .stars i:nth-child(1) {
