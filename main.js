@@ -1,4 +1,5 @@
 window.onbeforeunload = function () {
+  document.body.style.opacity = 0;
   window.scrollTo(0, 0);
 };
 
