@@ -95,7 +95,7 @@ section {
     span {
       font-weight: 600;
     }
-    transition: opacity 1s ease;
+    transition: opacity 1.5s ease;
   }
 
   p.loaded {
