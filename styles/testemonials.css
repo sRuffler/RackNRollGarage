@@ -57,7 +57,7 @@
       padding: 24px;
       align-items: center;
       opacity: 0;
-      transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1),
+      transition: opacity 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
         transform 1.6s cubic-bezier(0.22, 0.61, 0.36, 1);
       will-change: opacity, transform;
 
@@ -75,13 +75,6 @@
         font-size: 1.1em;
         text-align: center;
         opacity: 0.8;
-      }
-
-      .stars {
-        font-size: 1.1rem;
-        color: var(--highway-yellow);
-
-        text-align: center;
       }
 
       img {
@@ -110,6 +103,30 @@
       transition-delay: 0.8s;
     }
   }
+}
+
+.stars i {
+  font-size: 1rem !important;
+}
+
+.stars i:nth-child(1) {
+  color: var(--secondary-color);
+  opacity: 0.5;
+}
+.stars i:nth-child(2) {
+  color: #e98b17; /* blend between secondary and yellow */
+  opacity: 0.6;
+}
+.stars i:nth-child(3) {
+  color: #f3b11a; /* mid-point color */
+  opacity: 0.7;
+}
+.stars i:nth-child(4) {
+  color: #f7c71a; /* blend between mid and yellow */
+  opacity: 0.8;
+}
+.stars i:nth-child(5) {
+  color: var(--text-highlight);
 }
 
 /* When loaded, fade in and reset transform */
