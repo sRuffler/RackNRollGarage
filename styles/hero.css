@@ -9,6 +9,7 @@
   overflow: hidden;
   background-color: black;
   position: relative;
+  opacity: 1;
 }
 
 #heroSection .overlay {
