@@ -74,6 +74,10 @@ section {
   padding: 40px;
   position: relative;
   margin-top: -270px;
+  border-bottom-left-radius: 50% 100px;
+  border-bottom-right-radius: 50% 100px;
+  overflow: hidden;
+  box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.35);
 
   h3 {
     font-size: 2em;
@@ -124,6 +128,8 @@ section {
     padding-left: 24px;
     padding-right: 24px;
     font-size: 15px;
+    border-bottom-left-radius: 50% 60px;
+    border-bottom-right-radius: 50% 60px;
   }
 }
 
