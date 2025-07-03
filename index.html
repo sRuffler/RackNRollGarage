@@ -48,7 +48,7 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
-    <section id="heroSection">
+    <section id="heroSection" class="fade-in">
       <div class="overlay"></div>
       <div class="overlay2"></div>
       <div class="hero-content">
@@ -59,8 +59,9 @@
       </div>
     </section>
     <section id="aboutSection">
-      <h3>Let’s bring your camper to life</h3>
+      <h3 class="fade-in">Let’s bring your camper to life</h3>
       <p
+        class="fade-in"
         style="
           padding-bottom: 32px;
           border-bottom: 1px solid #f8c30d;
@@ -71,18 +72,21 @@
         workshop, just minutes away from the city centre.
       </p>
 
-      <p style="padding-top: 32px; padding-bottom: 16px; font-weight: 600">
+      <p
+        class="fade-in"
+        style="padding-top: 32px; padding-bottom: 16px; font-weight: 600"
+      >
         Since 2017, Rack’n’Roll Garage has earned a solid reputation for
         crafting high-quality camper conversions and pop-tops.
       </p>
 
-      <p style="padding-bottom: 16px">
+      <p class="fade-in" style="padding-bottom: 16px">
         Born from a passion for campervans and backed by years of expert
         carpentry, we create truly bespoke conversions tailored to each
         customer.
       </p>
 
-      <p style="padding-bottom: 16px">
+      <p class="fade-in" style="padding-bottom: 16px">
         Every build reflects our commitment to top-tier craftsmanship,
         thoughtful design, and meticulous attention to detail.
       </p>
@@ -92,7 +96,7 @@
       <h3>Services to kick-start your next road-trip story</h3>
       <div class="container">
         <div
-          class="service-card"
+          class="service-card fade-in"
           v-on:click="toggleSidePageById('bespokeConversions')"
         >
           <img src="images/bespokeConversions.png" />
@@ -102,7 +106,7 @@
           ></a>
         </div>
         <div
-          class="service-card"
+          class="service-card fade-in"
           v-on:click="toggleSidePageById('vwConversions')"
         >
           <img src="images/VWConversions.png" />
@@ -112,7 +116,7 @@
           ></a>
         </div>
         <div
-          class="service-card"
+          class="service-card fade-in"
           v-on:click="toggleSidePageById('skylineConversions')"
         >
           <img src="images/Skyline.png" />

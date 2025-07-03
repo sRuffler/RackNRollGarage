@@ -52,3 +52,9 @@ const target = document.getElementById("testimonalsSection");
 if (target) {
   observer.observe(target);
 }
+
+const fadeInElements = document.querySelectorAll(".fade-in");
+
+if (fadeInElements) {
+  fadeInElements.forEach((x) => observer.observe(x));
+}

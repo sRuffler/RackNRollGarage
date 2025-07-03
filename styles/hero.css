@@ -9,6 +9,12 @@
   overflow: hidden;
   background-color: black;
   position: relative;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#heroSection.loaded {
+  opacity: 1;
 }
 
 #heroSection .overlay {

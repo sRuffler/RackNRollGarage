@@ -114,7 +114,7 @@ const InfiniteScrollGrid = {
       <div
         v-for="(row, rowIndex) in rows"
         :key="rowIndex"
-        class="row"
+        class="row fade-in"
       >
       <div class="track-blur left"></div>
       <div class="track-blur right"></div>

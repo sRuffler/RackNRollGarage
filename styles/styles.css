@@ -88,13 +88,18 @@ section {
     text-align: center;
     font-weight: 500;
     font-size: 0.9em;
-    opacity: 0.8;
+    opacity: 0;
     color: white;
     max-width: 870px;
     word-wrap: break-word;
     span {
       font-weight: 600;
     }
+    transition: opacity 1s ease;
+  }
+
+  p.loaded {
+    opacity: 0.8;
   }
 }
 

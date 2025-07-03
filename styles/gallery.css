@@ -40,6 +40,12 @@
   width: 100%;
   overflow: hidden;
   position: relative;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.infinite-grid .row.loaded {
+  opacity: 1;
 }
 
 .track-blur {
