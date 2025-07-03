@@ -128,8 +128,8 @@ section {
     padding-left: 24px;
     padding-right: 24px;
     font-size: 15px;
-    border-bottom-left-radius: 50% 60px;
-    border-bottom-right-radius: 50% 60px;
+    border-bottom-left-radius: 50% 30px;
+    border-bottom-right-radius: 50% 30px;
   }
 }
 
