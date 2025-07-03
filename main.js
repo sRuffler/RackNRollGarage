@@ -3,6 +3,10 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
+window.addEventListener("pageshow", function () {
+  window.scrollTo(0, 0);
+});
+
 const app = Vue.createApp({
   data() {
     return {
