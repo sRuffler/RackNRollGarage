@@ -131,6 +131,12 @@
   }
 }
 
+@media (max-width: 600px) {
+  #gallerySection h2 {
+    font-size: 3em;
+  }
+}
+
 /* When loaded, fade in and reset transform */
 .custom-gallery-grid.loaded .item {
   opacity: 1;
