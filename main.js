@@ -164,6 +164,10 @@ const target = document.getElementById("testimonalsSection");
 if (target) {
   observer.observe(target);
 }
+const contact = document.getElementById("contactSectionContainer");
+if (contact) {
+  observer.observe(contact);
+}
 
 const gallerytarget = document.getElementById("galleryGrid");
 if (gallerytarget) {
