@@ -37,7 +37,7 @@ const app = Vue.createApp({
         if (element.classList.contains("active")) {
           window.setTimeout(() => {
             document.body.style.overflow = "hidden";
-          }, 500);
+          }, 100);
         } else {
           document.body.style.overflow = "auto";
         }
@@ -103,7 +103,7 @@ const app = Vue.createApp({
     },
     onTouchEnd(id) {
       const swipeDistance = this.touchEndX - this.touchStartX;
-      const minSwipeDistance = 50;
+      const minSwipeDistance = 150;
 
       if (swipeDistance > minSwipeDistance) {
         const el = document.getElementById(id);
