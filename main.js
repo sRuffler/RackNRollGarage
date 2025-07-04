@@ -74,10 +74,24 @@ const app = Vue.createApp({
       modalImg.src = event.target.src;
       modal.classList.add("active");
       document.body.style.overflow = "hidden";
+
+      window.setTimeout(() => {
+        const overlay = document.getElementById("galleryModalOverlay");
+        overlay.style.opacity = 0.85;
+
+        const img = document.getElementById("galleryModalImg");
+        img.style.transform = "scale(1)";
+        img.style.opacity = 1;
+      }, 100);
     },
     closeImagePreview() {
       document.getElementById("galleryModal").classList.remove("active");
       document.body.style.overflow = "auto";
+      const overlay = document.getElementById("galleryModalOverlay");
+      overlay.style.opacity = 0;
+      const img = document.getElementById("galleryModalImg");
+      img.style.transform = "scale(0)";
+      img.style.opacity = 0;
     },
   },
 });

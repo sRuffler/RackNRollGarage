@@ -332,7 +332,11 @@
     </div>
 
     <div id="galleryModal" class="gallery-modal">
-      <div class="gallery-modal-overlay" v-on:click="closeImagePreview"></div>
+      <div
+        id="galleryModalOverlay"
+        class="gallery-modal-overlay"
+        v-on:click="closeImagePreview"
+      ></div>
       <img id="galleryModalImg" src="" alt="Gallery Fullscreen" />
       <button
         id="galleryModalClose"

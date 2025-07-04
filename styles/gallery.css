@@ -61,6 +61,7 @@
   will-change: transform, box-shadow;
   z-index: 1;
   position: relative;
+  cursor: pointer;
 }
 
 .custom-gallery-grid .item img:hover {
@@ -176,8 +177,11 @@
 .gallery-modal-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0);
+  opacity: 0;
   z-index: 1;
+  transition: opacity 1s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity;
 }
 
 .gallery-modal img {
@@ -188,6 +192,12 @@
   border-radius: 16px;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
   background: #fff;
+  opacity: 0;
+  transform: none;
+  transition: opacity 0.6s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+  transition-delay: 0.3s;
 }
 
 .gallery-modal-close {
