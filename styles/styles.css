@@ -142,6 +142,18 @@ section {
   }
 }
 
+@media (max-width: 800px) and (min-height: 600px) {
+  #aboutSection {
+    margin-top: -100px;
+  }
+}
+
+@media (max-width: 800px) and (max-height: 600px) {
+  #aboutSection {
+    margin-top: -40px;
+  }
+}
+
 @media (min-width: 600px) {
   #aboutSection {
     font-size: 15px;

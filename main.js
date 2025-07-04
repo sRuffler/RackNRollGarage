@@ -160,13 +160,26 @@ const galleryObserver = new IntersectionObserver(
   }
 );
 
+const contactObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("loaded");
+      }
+    });
+  },
+  {
+    threshold: 0.05,
+  }
+);
+
 const target = document.getElementById("testimonalsSection");
 if (target) {
   observer.observe(target);
 }
 const contact = document.getElementById("contactSectionContainer");
 if (contact) {
-  observer.observe(contact);
+  contactObserver.observe(contact);
 }
 
 const gallerytarget = document.getElementById("galleryGrid");
