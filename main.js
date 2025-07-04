@@ -11,6 +11,26 @@
 //   setTimeout(() => window.scrollTo(0, 0), 10);
 // });
 
+document.querySelectorAll(".custom-gallery-grid .item img").forEach((img) => {
+  img.addEventListener("click", function () {
+    const modal = document.getElementById("galleryModal");
+    const modalImg = document.getElementById("galleryModalImg");
+    modalImg.src = this.src;
+    modal.classList.add("active");
+  });
+});
+
+document
+  .getElementById("galleryModalClose")
+  .addEventListener("click", function () {
+    document.getElementById("galleryModal").classList.remove("active");
+  });
+document
+  .querySelector(".gallery-modal-overlay")
+  .addEventListener("click", function () {
+    document.getElementById("galleryModal").classList.remove("active");
+  });
+
 const app = Vue.createApp({
   data() {
     return {
@@ -67,6 +87,15 @@ const app = Vue.createApp({
       }
 
       requestAnimationFrame(animateScroll);
+    },
+    openImagePreview(event) {
+      const modal = document.getElementById("galleryModal");
+      const modalImg = document.getElementById("galleryModalImg");
+      modalImg.src = event.target.src;
+      modal.classList.add("active");
+    },
+    closeImagePreview() {
+      document.getElementById("galleryModal").classList.remove("active");
     },
   },
 });

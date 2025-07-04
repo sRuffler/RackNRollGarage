@@ -150,23 +150,57 @@
       </h3>
       <div class="custom-gallery-grid" id="galleryGrid">
         <div class="item item1">
-          <img src="images/bespokeConversions.png" alt="" />
+          <img
+            src="images/bespokeConversions.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
         </div>
-        <div class="item item2"><img src="images/interior1.png" alt="" /></div>
+        <div class="item item2">
+          <img
+            src="images/interior1.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
+        </div>
         <div class="item item3">
-          <img src="images/VWConversions.png" alt="" />
+          <img
+            src="images/VWConversions.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
         </div>
         <div class="item item4">
-          <img src="images/Skyline.png" alt="" />
+          <img src="images/Skyline.png" v-on:click="openImagePreview" alt="" />
         </div>
-        <div class="item item5"><img src="images/interior2.png" alt="" /></div>
+        <div class="item item5">
+          <img
+            src="images/interior2.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
+        </div>
         <div class="item item6">
-          <img src="images/interior4.png" alt="" />
+          <img
+            src="images/interior4.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
         </div>
         <div class="item item7">
-          <img src="images/interior5.png" alt="" />
+          <img
+            src="images/interior5.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
         </div>
-        <div class="item item8"><img src="images/interior3.png" alt="" /></div>
+        <div class="item item8">
+          <img
+            src="images/interior3.png"
+            v-on:click="openImagePreview"
+            alt=""
+          />
+        </div>
       </div>
     </section>
     <section id="testimonalsSection">
@@ -295,6 +329,18 @@
         ></i>
         <h2>Skyline Pop-up Roof</h2>
       </div>
+    </div>
+
+    <div id="galleryModal" class="gallery-modal">
+      <div class="gallery-modal-overlay" v-on:click="closeImagePreview"></div>
+      <img id="galleryModalImg" src="" alt="Gallery Fullscreen" />
+      <button
+        id="galleryModalClose"
+        v-on:click="closeImagePreview"
+        class="gallery-modal-close"
+      >
+        &times;
+      </button>
     </div>
     <!-- JavaScript -->
     <script src="slidingRowsCarousel.js"></script>
