@@ -317,7 +317,13 @@
       </div>
     </div>
 
-    <div id="vwConversions" class="sidebar vw-conversions-wrapper">
+    <div
+      id="vwConversions"
+      class="sidebar vw-conversions-wrapper"
+      @touchstart="onTouchStart"
+      @touchmove="onTouchMove"
+      @touchend="onTouchEnd('vwConversions')"
+    >
       <div class="vw-conversions-container">
         <i
           class="fa-solid fa-xmark"
@@ -327,7 +333,13 @@
       </div>
     </div>
 
-    <div id="skylineConversions" class="sidebar skyline-conversions-wrapper">
+    <div
+      id="skylineConversions"
+      class="sidebar skyline-conversions-wrapper"
+      @touchstart="onTouchStart"
+      @touchmove="onTouchMove"
+      @touchend="onTouchEnd('skylineConversions')"
+    >
       <div class="skyline-conversions-container">
         <i
           class="fa-solid fa-xmark"
