@@ -178,7 +178,11 @@
     font-size: 14px;
   }
 
-  button.contact-btn {
+  #heroSection .hero-content .hero-header button {
+    padding: 12px 16px;
+  }
+
+  #heroSection .hero-content .hero-header button.contact-btn {
     margin-left: 16px;
   }
 }
