@@ -178,7 +178,8 @@
     font-size: 14px;
   }
 
-  #heroSection .hero-content .hero-body {
+  button.contact-btn {
+    margin-left: 16px;
   }
 }
 
