@@ -43,9 +43,30 @@ const app = Vue.createApp({
     },
     scrollToSection(id) {
       const section = document.getElementById(id);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+      if (!section) return;
+
+      const targetY = section.getBoundingClientRect().top + window.pageYOffset;
+      const startY = window.pageYOffset;
+      const distance = targetY - startY;
+      const duration = 1200; // duration in ms (increase for slower scroll)
+      let startTime = null;
+
+      function animateScroll(currentTime) {
+        if (!startTime) startTime = currentTime;
+        const timeElapsed = currentTime - startTime;
+        const progress = Math.min(timeElapsed / duration, 1);
+        // Ease in-out
+        const ease =
+          progress < 0.5
+            ? 2 * progress * progress
+            : -1 + (4 - 2 * progress) * progress;
+        window.scrollTo(0, startY + distance * ease);
+        if (progress < 1) {
+          requestAnimationFrame(animateScroll);
+        }
       }
+
+      requestAnimationFrame(animateScroll);
     },
   },
 });
