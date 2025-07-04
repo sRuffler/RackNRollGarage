@@ -33,11 +33,11 @@
 #servicesSection .container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 80px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 #servicesSection .service-card {
@@ -56,7 +56,7 @@
 }
 
 #servicesSection .service-card img {
-  height: 250px;
+  height: 350px;
   width: auto;
   object-fit: cover;
   object-position: center;
@@ -100,6 +100,16 @@
     padding-left: 24px;
     padding-right: 24px;
   }
+
+  #servicesSection .container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+  }
+
+  #servicesSection .service-card img {
+    height: 250px;
+  }
+
   #servicesSection h2 {
     font-size: 3em;
   }

@@ -1,15 +1,15 @@
-window.onbeforeunload = function () {
-  document.body.style.opacity = 0;
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   document.body.style.opacity = 0;
+//   window.scrollTo(0, 0);
+// };
 
-window.addEventListener("pageshow", function () {
-  setTimeout(() => window.scrollTo(0, 0), 10);
-});
+// window.addEventListener("pageshow", function () {
+//   setTimeout(() => window.scrollTo(0, 0), 10);
+// });
 
-window.addEventListener("DOMContentLoaded", function () {
-  setTimeout(() => window.scrollTo(0, 0), 10);
-});
+// window.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(() => window.scrollTo(0, 0), 10);
+// });
 
 const app = Vue.createApp({
   data() {
@@ -74,9 +74,27 @@ const fadeObserver = new IntersectionObserver(
   }
 );
 
+const galleryObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("loaded");
+      }
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
 const target = document.getElementById("testimonalsSection");
 if (target) {
   observer.observe(target);
+}
+
+const gallerytarget = document.getElementById("galleryGrid");
+if (gallerytarget) {
+  galleryObserver.observe(gallerytarget);
 }
 
 const fadeInElements = document.querySelectorAll(".fade-in");
