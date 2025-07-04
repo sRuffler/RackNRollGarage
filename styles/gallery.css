@@ -166,6 +166,7 @@
   inset: 0;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .gallery-modal.active {
