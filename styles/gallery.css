@@ -102,7 +102,7 @@
 }
 .item8 {
   grid-column: 13 / 16;
-  grid-row: 11 / 14;
+  grid-row: 11 / 15;
   transform: translateY(160px) scale(0.8);
   transition-delay: 1s !important;
 }
