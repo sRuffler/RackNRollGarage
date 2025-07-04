@@ -42,9 +42,17 @@
     <nav class="desktop-nav">
       <img src="images/logo_white.png" />
       <ul>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
+        <li>
+          <a href="#" v-on:click="scrollToSection('servicesSection')"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a href="#" v-on:click="scrollToSection('gallerySection')">Gallery</a>
+        </li>
+        <li>
+          <a href="#" v-on:click="scrollToSection('contactSection')">Contact</a>
+        </li>
       </ul>
     </nav>
     <section id="heroSection">
@@ -54,6 +62,15 @@
         <div class="hero-header">
           <h1>Custom <span>Campers</span></h1>
           <h3>Camper conversions specialist</h3>
+          <button v-on:click="scrollToSection('servicesSection')">
+            Services
+          </button>
+          <button
+            class="contact-btn"
+            v-on:click="scrollToSection('contactSection')"
+          >
+            Contact us
+          </button>
         </div>
       </div>
     </section>
@@ -91,8 +108,8 @@
       </p>
     </section>
     <section id="servicesSection">
-      <h2>Van-tastic Services</h2>
-      <h3>Services to kick start your next road trip story</h3>
+      <h2 class="fade-in">Van-tastic Services</h2>
+      <h3 class="fade-in">Services to kick start your next road trip story</h3>
       <div class="container">
         <div
           class="service-card fade-in"
@@ -127,8 +144,10 @@
       </div>
     </section>
     <section id="gallerySection">
-      <h2>Rolling Snapshots</h2>
-      <h3>Peek inside our most epic home-on-wheels transformations</h3>
+      <h2 class="fade-in">Rolling Snapshots</h2>
+      <h3 class="fade-in">
+        Peek inside our most epic home-on-wheels transformations
+      </h3>
       <div class="custom-gallery-grid" id="galleryGrid">
         <div class="item item1">
           <img src="images/bespokeConversions.png" alt="" />
@@ -151,8 +170,10 @@
       </div>
     </section>
     <section id="testimonalsSection">
-      <h2>Roadside Raves</h2>
-      <h3>Hear why our clients can’t stop singing our praises</h3>
+      <h2 class="fade-in">Roadside Raves</h2>
+      <h3 class="fade-in">
+        Hear why our clients can’t stop singing our praises
+      </h3>
       <div class="testimonals-grid">
         <div class="testimonal-container">
           <label class="client-name">Tom M</label>
@@ -196,7 +217,7 @@
       </div>
     </section>
     <section id="contactSection">
-      <div class="container">
+      <div class="container fade-in">
         <h2>Contact</h2>
         <p>
           Feeling lost on your van-life journey? We’re here for every question,
