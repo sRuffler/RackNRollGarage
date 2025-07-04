@@ -25,6 +25,8 @@ const app = Vue.createApp({
         "images/hero1.jpg",
         "images/hero1.jpg",
       ],
+      touchStartX: 0,
+      touchEndX: 0,
     };
   },
   methods: {
@@ -92,6 +94,25 @@ const app = Vue.createApp({
       const img = document.getElementById("galleryModalImg");
       img.style.transform = "scale(0)";
       img.style.opacity = 0;
+    },
+    onTouchStart(e) {
+      this.touchStartX = e.changedTouches[0].screenX;
+    },
+    onTouchMove(e) {
+      this.touchEndX = e.changedTouches[0].screenX;
+    },
+    onTouchEnd(id) {
+      const swipeDistance = this.touchEndX - this.touchStartX;
+      const minSwipeDistance = 50;
+
+      if (swipeDistance > minSwipeDistance) {
+        const el = document.getElementById(id);
+        el.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      this.touchStartX = 0;
+      this.touchEndX = 0;
     },
   },
 });

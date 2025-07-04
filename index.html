@@ -301,7 +301,13 @@
       </div>
     </section>
 
-    <div id="bespokeConversions" class="sidebar bespoke-conversions-wrapper">
+    <div
+      id="bespokeConversions"
+      class="sidebar bespoke-conversions-wrapper"
+      @touchstart="onTouchStart"
+      @touchmove="onTouchMove"
+      @touchend="onTouchEnd('bespokeConversions')"
+    >
       <div class="bespoke-conversions-container">
         <i
           class="fa-solid fa-xmark"
