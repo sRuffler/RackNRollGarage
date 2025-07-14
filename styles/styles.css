@@ -49,7 +49,6 @@ section {
   z-index: 100;
   padding: 40px;
   overflow: auto;
-  box-shadow: 0 0 12px 1px var(--primary-color);
   background: white; /* or your preferred background */
   transform: translateX(110%);
   transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -57,14 +56,14 @@ section {
 }
 
 .sidebar.active {
-  transform: translateX(0);
+  transform: translateX(0px);
 }
 
 .sidebar h2 {
   font-size: 3em;
   line-height: 1em;
   font-weight: 800;
-  color: white;
+  color: black;
   text-transform: uppercase;
 }
 
@@ -117,9 +116,26 @@ section {
   }
 }
 
+ul.breadcrumbs {
+  list-style: none;
+  display: flex;
+  color: black;
+
+  li:not(:last-child)::after{
+    content: ">";
+    margin:0 16px;
+  }
+
+  li a {
+    text-decoration: none;
+    color:black;
+  }
+}
+
 @media (max-width: 600px) {
   .sidebar {
     padding: 40px 16px;
+    font-size: 12px;
   }
 
   .sidebar i.fa-xmark {
