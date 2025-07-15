@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="styles/testemonials.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/bespokeConversions.css" />
+    <link rel="stylesheet" href="styles/skyline.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   </head>
   <body id="app">
@@ -405,16 +406,59 @@
     >
       <div class="skyline-conversions-container">
         <i
-          class="fa-solid fa-xmark"
+          class="fa-solid fa-xmark close"
           v-on:click="toggleSidePageById('skylineConversions')"
         ></i>
         <section class="header">
           <div class="overlay"></div>
           <img src="images/heroImage.jpg" alt="" />
           <h2>Skyline<br /><span>Pop-up Roofs</span></h2>
-          <h3>
-            More Headroom. More Possibilities.
+          <h3>More Headroom. More Possibilities.</h3>
+        </section>
+
+        <section class="about">
+          <h3>Transform your camper van with a Skyline pop top</h3>
+          <p>
+            As the main distributor in Wales for supplying and fitting the
+            Skyline range of pop top roofs, you can trust that your van is in
+            good hands. Please call us for more information or to request a free
+            quote.
           </p>
+        </section>
+        <section class="overview">
+          <div class="intro">
+            <h3>An Overview of Excellence</h3>
+            <p>
+              With over 12 years in the making to refine and enhance these
+              luxury camper pop top roof systems, Skyline is the brand of
+              choice.
+            </p>
+          </div>
+          <div class="grid">
+            <img src="./images/skyline2.jpg" />
+            <div class="safety-info">
+              <h4>Safety and Quality First</h4>
+              <p>
+                Always puttings safety first, Skyline is the market leader,
+                boasting full TUV approval for their T5/6 roofs, and ISO9001
+                rating.
+              </p>
+              <ul>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>Superior rigid roof</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i>
+                  <p>No external fittings</p>
+                </li>
+                <li>
+                  <i class="fa-solid fa-circle-check"></i
+                  ><p>100% waterproof canvas</p>
+                </li>
+              </ul>
+            </div>
+          </div>
         </section>
       </div>
     </div>
