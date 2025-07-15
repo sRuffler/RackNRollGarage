@@ -32,9 +32,9 @@
     background-size: cover;
     max-width: unset;
     width: 100%;
-    padding: 80px 40px 80px 40px;
+    padding: 168px 40px 80px 40px;
     position: relative;
-    border-bottom:4px solid black;
+    border-bottom:10px solid black;
 
     .overlay {
       position: absolute;
@@ -149,7 +149,7 @@
   cursor: pointer;
   color: white;
   position: absolute;
-  top: 10px;
+  top: 98px;
   right: 10px;
   z-index: 2;
 }
@@ -269,7 +269,7 @@
     padding: 0px;
   }
   .bespoke-conversions-wrapper .bespoke-conversions-container section.header {
-    padding: 40px 24px 40px 24px;
+    padding: 128px 24px 40px 24px;
 
     h2 {
       font-size: 3em;

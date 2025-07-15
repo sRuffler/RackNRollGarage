@@ -1,5 +1,5 @@
 nav {
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   z-index: 100;
@@ -8,9 +8,10 @@ nav {
   align-items: center;
   gap: 16px;
   padding: 24px 40px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 1);
   width: 100%;
   overflow: hidden;
+  box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav.desktop-nav {

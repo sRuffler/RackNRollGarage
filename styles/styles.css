@@ -46,8 +46,7 @@ section {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 100;
-  
+  z-index: 99;
   overflow: auto;
   background: white; /* or your preferred background */
   transform: translateX(110%);

@@ -62,7 +62,7 @@ const app = Vue.createApp({
           progress < 0.5
             ? 2 * progress * progress
             : -1 + (4 - 2 * progress) * progress;
-        window.scrollTo(0, startY + distance * ease);
+        window.scrollTo(0, startY + (distance - 88) * ease);
         if (progress < 1) {
           requestAnimationFrame(animateScroll);
         }
