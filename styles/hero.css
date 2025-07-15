@@ -156,7 +156,7 @@
 
 @media (max-width: 800px) {
   #heroSection {
-    min-height: 70vh; 
+    min-height: 100vh; 
   }
 
   #heroSection .overlay2 {
