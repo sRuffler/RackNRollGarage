@@ -19,7 +19,6 @@
       height: auto;
       width: 100%;
       border-radius: 12px;
-      outline:10px solid black
     }
   }
 
@@ -35,7 +34,7 @@
     width: 100%;
     padding: 80px 40px 80px 40px;
     position: relative;
-    border-bottom:10px solid black;
+    border-bottom:4px solid black;
 
     .overlay {
       position: absolute;
@@ -293,7 +292,6 @@
 
     img {
       max-height: 300px;
-      outline: none;
     }
 
     div {
