@@ -260,6 +260,7 @@
 @media(max-width:900px){
   .skyline-conversions-wrapper .skyline-conversions-container section.header{
     height: calc(50vh - 88px);
+    padding:16px;
     
     img{
       height: calc(50vh - 88px);
