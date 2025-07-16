@@ -61,8 +61,10 @@
       </ul>
     </nav>
     <section id="heroSection">
-      <video autoplay muted loop playsinline class="background-video">
-        <source src="./images/vid3.mp4" type="video/mp4" />
+      <video autoplay muted loop playsinline preload="metadata" class="background-video">
+        <source  type="video/mp4" />
+        <source src="./images/vid3.mp4" type="video/mp4" media="(min-width: 800px)">
+        <source src="./images/vid2HD.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div id="hero-sentinel"></div>
