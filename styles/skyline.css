@@ -200,12 +200,12 @@
     }
   }
 
-  h3 {
+  .skyline-conversions-wrapper .skyline-conversions-container h3 {
     font-size: 1.7em !important;
     line-height: 1.3em !important;
   }
 
-  h4 {
+  .skyline-conversions-wrapper .skyline-conversions-container h4 {
     font-size: 1.5em !important;
     line-height: 1.2em !important;
   }

@@ -62,6 +62,8 @@ const app = Vue.createApp({
       const targetY = section.getBoundingClientRect().top + window.pageYOffset;
       const startY = window.pageYOffset;
       const distance = targetY - startY;
+      if (id !== "heroSection") distance - 88;
+
       const duration = 1200; // duration in ms (increase for slower scroll)
       let startTime = null;
 
