@@ -1,7 +1,7 @@
 #heroSection {
-  background-image: url(../images/skylineBanner.jpg);
+  background-image: url(../images/hero.png);
   background-repeat: no-repeat;
-  background-position: center 45%;
+  background-position: 30% 45%;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
