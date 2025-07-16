@@ -8,16 +8,28 @@ nav {
   align-items: center;
   gap: 16px;
   padding: 24px 40px;
-  background-color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0);
   width: 100%;
   overflow: hidden;
-  box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 nav.desktop-nav {
   ul {
     display: none;
   }
+  i {
+    display: flex;
+    color: white;
+    font-size: 24px;
+  }
+}
+
+nav.scrolled {
+  /* fully opaque once scrolled */
+  background-color: rgba(0, 0, 0, 1);
+  box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.5);
 }
 
 nav img {
@@ -36,9 +48,26 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2em;
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+#navSidebar {
+  position: fixed;
+  top: 88px;
+  width: 100vw;
+  min-height: 100vw;
+  background: white;
+  transform: translateX(110%);
+  transition: transform 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: transform;
+
+  &.active {
+    transform: translateX(0%);
   }
 }
 
@@ -51,5 +80,9 @@ nav ul li a {
 @media (min-width: 800px) {
   nav.desktop-nav ul {
     display: flex;
+  }
+
+  nav.desktop-nav i {
+    display: none;
   }
 }

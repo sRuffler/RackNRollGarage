@@ -13,6 +13,13 @@
   border-bottom: 10px solid black;
 }
 
+#hero-sentinel {
+  position: absolute;
+  top: 44px;
+  width: 100%;
+  height: 1px;
+}
+
 #heroSection .overlay {
   display: none;
   width: 100%;

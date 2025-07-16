@@ -42,6 +42,7 @@
   <body id="app">
     <nav class="desktop-nav">
       <img src="images/logo_white.png" />
+      <i class="fa-solid fa-bars"></i>
       <ul>
         <li>
           <a href="#" v-on:click="scrollToSection('servicesSection')"
@@ -57,6 +58,7 @@
       </ul>
     </nav>
     <section id="heroSection">
+      <div id="hero-sentinel"></div>
       <div class="overlay"></div>
       <div class="overlay2"></div>
       <div class="hero-content">
@@ -329,7 +331,7 @@
             custom campers around your lifestyle. Let’s talk about what you need
             and bring your vision to life
           </p>
-          <button class="">Contact us</button>
+          <button v-on:click="scrollToSection('contactSection')">Contact us</button>
         </section>
 
         <section class="content">
@@ -460,6 +462,17 @@
             </div>
           </div>
         </section>
+      </div>
+    </div>
+
+    <div id="navSidebar">
+      <ul>
+        <li>Services</li>
+        <li>Gallery</li>
+        <li>Contact</li>
+      </ul>
+      <div class="nav-footer">
+
       </div>
     </div>
 

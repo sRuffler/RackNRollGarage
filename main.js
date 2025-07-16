@@ -35,6 +35,7 @@ const app = Vue.createApp({
       if (element) {
         element.classList.toggle("active");
         if (element.classList.contains("active")) {
+          element.scrollTop = 0;
           window.setTimeout(() => {
             document.body.style.overflow = "hidden";
           }, 100);
@@ -46,6 +47,17 @@ const app = Vue.createApp({
     scrollToSection(id) {
       const section = document.getElementById(id);
       if (!section) return;
+
+      // Close all side bars
+      const bespokeSideBar = document.getElementById("bespokeConversions");
+      const vwSidebar = document.getElementById("vwConversions");
+      const skylineSidebar = document.getElementById("skylineConversions");
+
+      document.body.style.overflow = "auto";
+
+      bespokeSideBar.classList.remove("active");
+      vwSidebar.classList.remove("active");
+      skylineSidebar.classList.remove("active");
 
       const targetY = section.getBoundingClientRect().top + window.pageYOffset;
       const startY = window.pageYOffset;
@@ -192,3 +204,18 @@ const fadeInElements = document.querySelectorAll(".fade-in");
 if (fadeInElements) {
   fadeInElements.forEach((x) => fadeObserver.observe(x));
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector(".desktop-nav");
+  const sentinel = document.querySelector("#hero-sentinel");
+
+  const io = new IntersectionObserver(
+    ([entry]) => {
+      // entry.isIntersecting = true when sentinel is in view (i.e. hero bottom is visible)
+      nav.classList.toggle("scrolled", !entry.isIntersecting);
+    },
+    { rootMargin: "0px", threshold: 0 }
+  );
+
+  io.observe(sentinel);
+});
