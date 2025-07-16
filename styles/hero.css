@@ -20,8 +20,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 25% center;
+  object-position: right center;
   z-index: 0;
+}
+
+@media (max-width: 800px) {
+  .background-video{
+      object-position: 25% center;
+  }
 }
 
 #hero-sentinel {
@@ -92,7 +98,7 @@
   text-transform: uppercase;
   font-size: 1.5em;
   line-height: 1.2em;
-  margin-top:8px;
+  margin-top: 8px;
   color: white;
   span {
     color: var(--secondary-color);
@@ -161,7 +167,6 @@
   #heroSection {
     min-height: 70vh;
     height: 100%;
-    
   }
 
   #heroSection .hero-content {
@@ -177,7 +182,7 @@
 
 @media (max-width: 800px) {
   #heroSection {
-    min-height: 100vh; 
+    min-height: 100vh;
   }
 
   #heroSection .overlay2 {
