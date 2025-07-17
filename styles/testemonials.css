@@ -106,25 +106,6 @@
 
 .stars i {
   font-size: 1rem;
-}
-
-.stars i:nth-child(1) {
-  color: var(--secondary-color);
-  opacity: 0.5;
-}
-.stars i:nth-child(2) {
-  color: #e98b17; /* blend between secondary and yellow */
-  opacity: 0.6;
-}
-.stars i:nth-child(3) {
-  color: #f3b11a; /* mid-point color */
-  opacity: 0.7;
-}
-.stars i:nth-child(4) {
-  color: #f7c71a; /* blend between mid and yellow */
-  opacity: 0.8;
-}
-.stars i:nth-child(5) {
   color: var(--text-highlight);
 }
 

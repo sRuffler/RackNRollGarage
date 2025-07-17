@@ -14,17 +14,6 @@
 const app = Vue.createApp({
   data() {
     return {
-      rows: 3,
-      cols: 6,
-      speed: 70,
-      cardImgs: [
-        "images/hero1.jpg",
-        "images/hero1.jpg",
-        "images/hero1.jpg",
-        "images/hero1.jpg",
-        "images/hero1.jpg",
-        "images/hero1.jpg",
-      ],
       touchStartX: 0,
       touchEndX: 0,
       videoLoaded: false,
@@ -119,7 +108,7 @@ const app = Vue.createApp({
     },
     onTouchEnd(id) {
       const swipeDistance = this.touchEndX - this.touchStartX;
-      const minSwipeDistance = 150;
+      const minSwipeDistance = 50;
 
       if (swipeDistance > minSwipeDistance) {
         const el = document.getElementById(id);

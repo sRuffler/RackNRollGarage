@@ -1,8 +1,22 @@
 :root {
   --font-family: "Poppins", sans-serif;
-  --primary-color: #50b1e3;
-  --secondary-color: #d87600;
-  --text-highlight: #f8c30d;
+  --primary-color: hsla(101, 48%, 37%, 1);
+  --secondary-color: hsla(26, 100%, 58%, 1);
+  --text-highlight: hsla(47, 100%, 50%, 1);
+
+  /* CSS HEX */
+  /* --raisin-black: #1e212bff;
+  --forest-green: #4d8b31ff;
+  --mikado-yellow: #ffc800ff;
+  --orange-wheel: #ff8427ff;
+  --white: #ffffffff; */
+
+  /* CSS HSL */
+  --raisin-black: hsla(226, 18%, 14%, 1);
+  --forest-green: hsla(101, 48%, 37%, 1);
+  --mikado-yellow: hsla(47, 100%, 50%, 1);
+  --orange-wheel: hsla(26, 100%, 58%, 1);
+  --white: hsla(0, 0%, 100%, 1);
 }
 
 * {
@@ -29,6 +43,35 @@ body {
 section {
   min-height: 100vh;
 }
+
+button.hero-btn {
+    border-radius: 12px;
+    padding: 16px 36px;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 32px;
+    background: linear-gradient(
+      to right,
+      hsla(101, 48%, 37%, 0.8),
+      hsla(101, 48%, 22%, 0.8)
+    );
+    color: #ffffff;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s ease;
+    box-shadow: 0px 0px 16px 8px hsla(101, 48%, 22%, 0.7);
+    margin-left: 0px;
+    border:2px solid hsla(101, 48%, 80%, 1);
+    z-index: 3;
+    position: relative;
+  }
+
+  button.hero-btn:hover {
+    background-position: right;
+  }
 
 .fade-in {
   opacity: 0;
@@ -87,7 +130,6 @@ section {
   overflow: hidden;
   box-shadow: 0 30px 30px -20px rgba(0, 0, 0, 0.35);
 
-
   h3 {
     font-size: 2em;
     font-weight: 800;
@@ -121,14 +163,14 @@ ul.breadcrumbs {
   display: flex;
   color: black;
 
-  li:not(:last-child)::after{
+  li:not(:last-child)::after {
     content: ">";
-    margin:0 16px;
+    margin: 0 16px;
   }
 
   li a {
     text-decoration: none;
-    color:black;
+    color: black;
   }
 }
 
@@ -205,3 +247,4 @@ ul.breadcrumbs {
     max-width: 870px;
   }
 }
+

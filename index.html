@@ -93,14 +93,14 @@
         <div class="hero-header">
           <h1>Custom <span>Campers</span></h1>
           <h3>Camper conversions specialist</h3>
-          <button v-on:click="scrollToSection('servicesSection')">
+          <!-- <button v-on:click="scrollToSection('servicesSection')">
             Services
-          </button>
+          </button> -->
           <button
             class="contact-btn"
             v-on:click="scrollToSection('contactSection')"
           >
-            Contact us
+            Book a Free Consultation
           </button>
         </div>
       </div>
@@ -443,13 +443,27 @@
         ></i>
         <section class="header">
           <div class="overlay"></div>
-          <img src="images/heroImage.jpg" alt="" />
+          <video
+        ref="skylineHeroVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+        poster="./images/heroImage.jpg"
+        class="skyline-background-video"
+      >
+        <source src="./images/skylineHero2.mp4" type="video/mp4" media="(max-width: 1000px)" />
+        Your browser does not support the video tag.
+      </video>
+          <!-- <img src="images/heroImage.jpg" alt="" /> -->
           <h2>Skyline<br /><span>Pop-up Roofs</span></h2>
           <h3>More Headroom. More Possibilities.</h3>
+          <button class="hero-btn">Get a Quote</button>
         </section>
 
         <section class="about">
-          <h3>Transform your camper van with a Skyline pop top</h3>
+          <h3>Transform your camper</h3>
           <p>
             As the main distributor in Wales for supplying and fitting the
             Skyline range of pop top roofs, you can trust that your van is in

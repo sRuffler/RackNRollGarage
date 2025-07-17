@@ -34,7 +34,7 @@
     width: 100%;
     padding: 80px 40px 80px 40px;
     position: relative;
-    border-bottom:10px solid black;
+    border-bottom:10px solid var(--raisin-black);
 
     .overlay {
       position: absolute;
@@ -82,7 +82,7 @@
       font-size: 18px;
       font-weight: 600;
       margin-top: 16px;
-      background-color: black;
+      background-color: var(--raisin-black);
       color: #ffffff;
       transition: background-color 0.5s ease;
       position: relative;
@@ -125,7 +125,7 @@
 
   h3 {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     text-transform: uppercase;
     line-height: 1em;
   }

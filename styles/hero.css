@@ -10,7 +10,7 @@
   background-color: black;
   position: relative;
   opacity: 1;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid var(--raisin-black)
 }
 
 .background-video {
@@ -150,25 +150,33 @@ button.play-button {
 
 #heroSection .hero-header {
   button {
-    background-color: white;
-    border-radius: 8px;
-    padding: 16px 24px;
+    border-radius: 12px;
+    padding: 16px 36px;
     color: black;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 600;
-    margin-top: 16px;
-    background-color: #c96a07;
+    margin-top: 32px;
+    background: linear-gradient(
+      to right,
+      hsla(101, 48%, 37%, 0.8),
+      hsla(101, 48%, 22%, 0.8)
+    );
     color: #ffffff;
-    transition: background-color 0.5s ease;
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s ease;
+    box-shadow: 0px 0px 16px 8px hsla(101, 48%, 22%, 0.7);
+    margin-left: 0px;
+    border:2px solid hsla(101, 48%, 80%, 1);
   }
 
   button:hover {
-    background-color: rgb(226, 122, 10);
+    background-position: right;
   }
 
-  button.contact-btn {
+  /* button.contact-btn {
     background-color: white;
     border-radius: 8px;
     padding: 16px 24px;
@@ -183,7 +191,7 @@ button.play-button {
 
   button.contact-btn:hover {
     background-color: rgb(236, 236, 236);
-  }
+  } */
 }
 
 #heroSection p {
@@ -241,10 +249,6 @@ button.play-button {
   #heroSection .hero-content .hero-header button {
     padding: 12px 16px;
   }
-
-  #heroSection .hero-content .hero-header button.contact-btn {
-    margin-left: 16px;
-  }
 }
 
 @media (min-width: 400px) {
@@ -261,6 +265,10 @@ button.play-button {
   #heroSection .hero-content .hero-header {
     font-size: 20px;
   }
+
+   #heroSection .hero-content .hero-header button {
+    font-size: 1em;
+  }
 }
 
 @media (min-width: 800px) {
@@ -270,6 +278,10 @@ button.play-button {
 
   #heroSection .hero-content .hero-header {
     font-size: 20px;
+  }
+
+  #heroSection .hero-content .hero-header button {
+    font-size: 1em;
   }
 
   #heroSection p {
@@ -286,6 +298,10 @@ button.play-button {
     font-size: 24px;
   }
 
+  #heroSection .hero-content .hero-header button {
+    font-size: 0.9em;
+  }
+
   #heroSection p {
     max-width: 750px;
   }
@@ -298,6 +314,10 @@ button.play-button {
 
   #heroSection .hero-content .hero-header {
     font-size: 32px;
+  }
+
+  #heroSection .hero-content .hero-header button {
+    font-size: 0.8em;
   }
 
   #heroSection p {
