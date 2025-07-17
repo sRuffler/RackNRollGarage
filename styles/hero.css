@@ -47,15 +47,14 @@ button.play-button {
 
   i {
     font-size: 32px;
-
     color: white;
     cursor: pointer;
-    opacity: 0.5;
+    opacity: 0.4;
   }
 
   &:hover {
     i {
-      opacity: 0.7;
+      opacity: 0.8;
     }
   }
 }
