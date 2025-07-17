@@ -1,15 +1,15 @@
-// window.onbeforeunload = function () {
-//   document.body.style.opacity = 0;
-//   window.scrollTo(0, 0);
-// };
+window.onbeforeunload = function () {
+  document.body.style.opacity = 0;
+  window.scrollTo(0, 0);
+};
 
-// window.addEventListener("pageshow", function () {
-//   setTimeout(() => window.scrollTo(0, 0), 10);
-// });
+window.addEventListener("pageshow", function () {
+  setTimeout(() => window.scrollTo(0, 0), 10);
+});
 
-// window.addEventListener("DOMContentLoaded", function () {
-//   setTimeout(() => window.scrollTo(0, 0), 10);
-// });
+window.addEventListener("DOMContentLoaded", function () {
+  setTimeout(() => window.scrollTo(0, 0), 10);
+});
 
 const app = Vue.createApp({
   data() {
