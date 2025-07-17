@@ -45,7 +45,7 @@ button.play-button {
   z-index: 10;
   cursor: pointer;
 
-  .fa-circle-play {
+  i {
     font-size: 32px;
 
     color: white;
