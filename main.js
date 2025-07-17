@@ -28,7 +28,7 @@ const app = Vue.createApp({
       touchStartX: 0,
       touchEndX: 0,
       videoLoaded: false,
-      videoPlaying: true
+      videoPlaying: true,
     };
   },
   methods: {
@@ -130,17 +130,16 @@ const app = Vue.createApp({
       this.touchStartX = 0;
       this.touchEndX = 0;
     },
-    handleVisibilityChange() {
-      const video = this.$refs.heroVideo;
-      if (document.visibilityState === "visible" && video.paused) {
-        this.$nextTick(()=>{
-          this.videoPlaying = false;
-          video.pause();
-          video.currentTime = 0;
-          
-        });
-      }
-    },
+    // handleVisibilityChange() {
+    //   const video = this.$refs.heroVideo;
+    //   if (document.visibilityState === "visible" && video.paused) {
+    //     this.$nextTick(() => {
+    //       this.videoPlaying = false;
+    //       video.pause();
+    //       video.currentTime = 0;
+    //     });
+    //   }
+    // },
     handleVideoError() {
       const video = this.$refs.heroVideo;
       video.classList.add("error");
@@ -148,14 +147,20 @@ const app = Vue.createApp({
       const hero = document.getElementById("heroSection");
       hero.style.backgroundImage = "url(./images/hero.png)";
     },
-    playVideo() {
+    toggleVideo() {
       const video = this.$refs.heroVideo;
       if (video.paused) {
-        video.play().then(()=>{
-          this.videoPlaying = true;
-        }).catch((error) => {
-          console.error("Video play failed:", error);
-        });
+        video
+          .play()
+          .then(() => {
+            this.videoPlaying = true;
+          })
+          .catch((error) => {
+            console.error("Video play failed:", error);
+          });
+      } else {
+        video.pause();
+        this.videoPlaying = false;
       }
     },
   },
@@ -163,18 +168,13 @@ const app = Vue.createApp({
     const video = this.$refs.heroVideo;
 
     // Resume playback when the tab becomes visible again
-    document.addEventListener("visibilitychange", this.handleVisibilityChange);
-
-    // Optional: start playback manually (some browsers require this)
-    video.play().catch((err) => {
-      console.warn("Initial autoplay blocked:", err);
-    });
+    // document.addEventListener("visibilitychange", this.handleVisibilityChange);
   },
   beforeUnmount() {
-    document.removeEventListener(
-      "visibilitychange",
-      this.handleVisibilityChange
-    );
+    // document.removeEventListener(
+    //   "visibilitychange",
+    //   this.handleVisibilityChange
+    // );
   },
 });
 
