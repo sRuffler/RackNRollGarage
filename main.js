@@ -134,9 +134,9 @@ const app = Vue.createApp({
       const video = this.$refs.heroVideo;
       if (document.visibilityState === "visible" && video.paused) {
         this.videoPlaying = false;
+        video.currentTime = 0;
         this.$nextTick(() => {
           video.pause();
-          video.currentTime = 0;
         });
       }
     },
@@ -169,12 +169,16 @@ const app = Vue.createApp({
 
     // Resume playback when the tab becomes visible again
     document.addEventListener("visibilitychange", this.handleVisibilityChange);
+    window.addEventListener("pageshow", this.handleVisibility);
+    window.addEventListener("pagehide", this.handleVisibility);
   },
   beforeUnmount() {
     document.removeEventListener(
       "visibilitychange",
       this.handleVisibilityChange
     );
+    window.removeEventListener("pageshow", this.handleVisibility);
+    window.removeEventListener("pagehide", this.handleVisibility);
   },
 });
 
