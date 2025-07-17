@@ -133,6 +133,7 @@ const app = Vue.createApp({
       const video = this.$refs.heroVideo;
       if (document.visibilityState === 'visible' && video.paused) {
         video.play().catch((err) => {
+          alert("Autoplay resume failed");
           console.warn('Autoplay resume failed:', err);
         });
       }
