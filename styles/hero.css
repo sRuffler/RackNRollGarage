@@ -1,5 +1,5 @@
 #heroSection {
-  background-image: url(../images/hero.png);
+  /* background-image: url(../images/hero.png); */
   background-repeat: no-repeat;
   background-position: 30% 45%;
   background-size: cover;
@@ -22,11 +22,21 @@
   object-fit: cover;
   object-position: 25% center;
   z-index: 0;
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+
+.background-video.loaded {
+  opacity: 1;
+}
+
+.background-video.error {
+  display: none;
 }
 
 @media (max-width: 800px) {
-  .background-video{
-      object-position: right center;
+  .background-video {
+    object-position: right center;
   }
 }
 

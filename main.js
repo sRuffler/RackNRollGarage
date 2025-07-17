@@ -27,6 +27,7 @@ const app = Vue.createApp({
       ],
       touchStartX: 0,
       touchEndX: 0,
+      videoLoaded: false
     };
   },
   methods: {
@@ -128,6 +129,35 @@ const app = Vue.createApp({
       this.touchStartX = 0;
       this.touchEndX = 0;
     },
+    handleVisibilityChange() {
+      const video = this.$refs.heroVideo;
+      if (document.visibilityState === 'visible' && video.paused) {
+        video.play().catch((err) => {
+          console.warn('Autoplay resume failed:', err);
+        });
+      }
+    },
+    handleVideoError(){
+      const video = this.$refs.heroVideo;
+      video.classList.add("error");
+
+      const hero = document.getElementById("heroSection");
+      hero.style.backgroundImage = "url(../images/hero.png)";
+    }
+  },
+  mounted(){
+    const video = this.$refs.heroVideo;
+
+    // Resume playback when the tab becomes visible again
+    document.addEventListener('visibilitychange', this.handleVisibilityChange);
+
+    // Optional: start playback manually (some browsers require this)
+    video.play().catch((err) => {
+      console.warn('Initial autoplay blocked:', err);
+    });
+  },
+  beforeUnmount() {
+    document.removeEventListener('visibilitychange', this.handleVisibilityChange);
   },
 });
 
