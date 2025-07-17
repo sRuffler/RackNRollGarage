@@ -82,8 +82,10 @@
         <source src="./images/vid2HD.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <i class="fa-solid fa-circle-play" v-on:click="playVideo" v-if="!videoPlaying"></i>
+      </div>
       <div id="hero-sentinel"></div>
-      <div class="overlay"></div>
+      <div class="overlay" ></div>
       <div class="overlay2"></div>
       <div class="hero-content">
         <div class="hero-header">

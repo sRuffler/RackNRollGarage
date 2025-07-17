@@ -34,6 +34,17 @@
   display: none;
 }
 
+.fa-circle-play{
+  position: absolute;
+  bottom:0px;
+  right:0px;
+  font-size: 32px;
+  padding:24px;
+  z-index:10;
+  color:white;
+  cursor: pointer;
+}
+
 @media (max-width: 800px) {
   .background-video {
     object-position: right center;

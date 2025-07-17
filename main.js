@@ -1,15 +1,15 @@
-window.onbeforeunload = function () {
-  document.body.style.opacity = 0;
-  window.scrollTo(0, 0);
-};
+// window.onbeforeunload = function () {
+//   document.body.style.opacity = 0;
+//   window.scrollTo(0, 0);
+// };
 
-window.addEventListener("pageshow", function () {
-  setTimeout(() => window.scrollTo(0, 0), 10);
-});
+// window.addEventListener("pageshow", function () {
+//   setTimeout(() => window.scrollTo(0, 0), 10);
+// });
 
-window.addEventListener("DOMContentLoaded", function () {
-  setTimeout(() => window.scrollTo(0, 0), 10);
-});
+// window.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(() => window.scrollTo(0, 0), 10);
+// });
 
 const app = Vue.createApp({
   data() {
@@ -28,6 +28,7 @@ const app = Vue.createApp({
       touchStartX: 0,
       touchEndX: 0,
       videoLoaded: false,
+      videoPlaying: true
     };
   },
   methods: {
@@ -132,9 +133,15 @@ const app = Vue.createApp({
     handleVisibilityChange() {
       const video = this.$refs.heroVideo;
       if (document.visibilityState === "visible" && video.paused) {
-        video.classList.add("error");
-        const hero = document.getElementById("heroSection");
-        hero.style.backgroundImage = "url(./images/hero.png)";
+        // video.classList.add("error");
+        this.$nextTick(()=>{
+          video.pause();
+          video.currentTime = 0;
+          this.videoPlaying = false;
+        });
+        
+        // const hero = document.getElementById("heroSection");
+        // hero.style.backgroundImage = "url(./images/hero.png)";
       }
     },
     handleVideoError() {
@@ -143,6 +150,16 @@ const app = Vue.createApp({
 
       const hero = document.getElementById("heroSection");
       hero.style.backgroundImage = "url(./images/hero.png)";
+    },
+    playVideo() {
+      const video = this.$refs.heroVideo;
+      if (video.paused) {
+        video.play().then(()=>{
+          this.videoPlaying = true;
+        }).catch((error) => {
+          console.error("Video play failed:", error);
+        });
+      }
     },
   },
   mounted() {
