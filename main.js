@@ -134,7 +134,7 @@ const app = Vue.createApp({
       if (document.visibilityState === "visible" && video.paused) {
         video.classList.add("error");
         const hero = document.getElementById("heroSection");
-        hero.style.backgroundImage = "url(../images/hero.png)";
+        hero.style.backgroundImage = "url(./images/hero.png)";
       }
     },
     handleVideoError() {
@@ -142,7 +142,7 @@ const app = Vue.createApp({
       video.classList.add("error");
 
       const hero = document.getElementById("heroSection");
-      hero.style.backgroundImage = "url(../images/hero.png)";
+      hero.style.backgroundImage = "url(./images/hero.png)";
     },
   },
   mounted() {
