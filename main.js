@@ -133,15 +133,12 @@ const app = Vue.createApp({
     handleVisibilityChange() {
       const video = this.$refs.heroVideo;
       if (document.visibilityState === "visible" && video.paused) {
-        // video.classList.add("error");
         this.$nextTick(()=>{
+          this.videoPlaying = false;
           video.pause();
           video.currentTime = 0;
-          this.videoPlaying = false;
+          
         });
-        
-        // const hero = document.getElementById("heroSection");
-        // hero.style.backgroundImage = "url(./images/hero.png)";
       }
     },
     handleVideoError() {
