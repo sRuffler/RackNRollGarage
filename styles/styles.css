@@ -174,6 +174,22 @@ ul.breadcrumbs {
   }
 }
 
+@keyframes rumble-with-gap {
+  0%   { transform: translate(0, 0) rotate(0deg); }
+  1%   { transform: translate(-1px, -1px) rotate(-1deg); }
+  2%  { transform: translate(2px,  -1px) rotate(1deg); }
+  3%  { transform: translate(1px,  -1px) rotate(-1deg); }
+  4%  { transform: translate(0px,  0px) rotate(0deg); }
+  5%  { transform: translate(1px,  1px) rotate(1deg); }
+  6%  { transform: translate(2px, 1px) rotate(-1deg); }
+  7%  { transform: translate(1px, 1px) rotate(1deg); }
+  8%, 100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.rumble-btn {
+  animation: rumble-with-gap 3.15s linear infinite;
+}
+
 @media (max-width: 600px) {
   .sidebar {
     padding: 0px;
